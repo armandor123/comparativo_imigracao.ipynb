@@ -75,7 +75,7 @@ Linguagem: Python
 
 # **Análise da Imigração para o Canadá (1980-2013)**
 
-# ## 1. Preparação do Ambiente e Carga dos Dados
+# 1. Preparação do Ambiente e Carga dos Dados
 
 # Importando a biblioteca pandas para manipulação e análise de dados.
 import pandas as pd
@@ -92,7 +92,7 @@ df.set_index('País', inplace=True)
 # Criando uma lista com os anos do período de análise para facilitar a filtragem das colunas.
 anos = list(map(str, range(1980, 2014)))
 
-# ## 2. Foco da Análise: A Imigração Brasileira
+# 2. Foco da Análise: A Imigração Brasileira
 
 # O objetivo inicial é explorar a trajetória da imigração brasileira para o Canadá.
 # Para isso, foi criada uma série temporal com os dados do Brasil.
@@ -103,11 +103,11 @@ brasil_dict = {'ano': brasil.index.tolist(), 'imigrantes': brasil.values.tolist(
 dados_brasil = pd.DataFrame(brasil_dict)
 
 
-# ## 3. Visualizando a Série Histórica com Matplotlib
+# 3. Visualizando a Série Histórica com Matplotlib
 
-# ### 3.1. Evolução da Imigração Brasileira (1980-2013)
+#  3.1. Evolução da Imigração Brasileira (1980-2013)
 # O primeiro passo é criar um gráfico de linhas para observar a tendência da imigração brasileira ao longo do tempo.
-# Isso nos ajuda a identificar picos, quedas e padrões gerais.
+# Isso ajuda a identificar picos, quedas e padrões gerais.
 
 plt.figure(figsize=(10, 6)) # Ajustando o tamanho para melhor legibilidade.
 plt.plot(dados_brasil['ano'], dados_brasil['imigrantes'])
@@ -124,7 +124,7 @@ plt.grid(linestyle='--', alpha=0.6) # Adicionando um grid suave para facilitar a
 plt.show()
 
 
-# ### 3.2. Comparativo: Brasil vs. Outros Países da América do Sul
+# ## 3.2. Comparativo: Brasil vs. Outros Países da América do Sul
 # Como a imigração brasileira se compara à de seus vizinhos sul-americanos?
 # A criação de subplots permite uma visualização comparativa eficiente.
 
@@ -165,7 +165,7 @@ for ax in axs.ravel():
 
 plt.show()
 
-# ### 3.3. Destaque: Qual o volume total de imigração por país?
+# ## 3.3. Destaque: Qual o volume total de imigração por país?
 # Para responder a essa pergunta, um gráfico de barras é ideal.
 # A análise focará nos países da América do Sul para entender a posição do Brasil na região.
 
